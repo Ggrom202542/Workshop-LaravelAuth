@@ -285,11 +285,6 @@ public function login(Request $request)
 php artisan make:model registers -m
 ```
 
--  run คำสั่งบน Terminal หรือ Console
-```console
-php artisan migrate
-```
-
 - ปรับแต่งไฟล์ migration
 ```php
 <?php
@@ -323,6 +318,11 @@ return new class extends Migration
         Schema::dropIfExists('registers');
     }
 };
+```
+
+-  run คำสั่งบน Terminal หรือ Console
+```console
+php artisan migrate
 ```
 
 15. ปรับแต่ง Controller/Auth/register.blade.php
